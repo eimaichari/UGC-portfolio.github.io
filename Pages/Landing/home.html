@@ -15,11 +15,18 @@
   <div class="nav-inner">
     <div class="logo"><span class="dot"></span>grace<span style="color:var(--muted)">.dev</span></div>
     <nav class="tabs">
-      <a href="#about">About<span class="ext">.tsx</span></a>
-      <a href="#work">Work<span class="ext">.tsx</span></a>
-      <a href="#services">Services<span class="ext">.tsx</span></a>
-      <a href="#contact">Contact<span class="ext">.tsx</span></a>
+      <a href="#about"><span data-i18n="nav.about">About</span><span class="ext">.tsx</span></a>
+      <a href="#work"><span data-i18n="nav.work">Work</span><span class="ext">.tsx</span></a>
+      <a href="#services"><span data-i18n="nav.services">Services</span><span class="ext">.tsx</span></a>
+      <a href="#contact"><span data-i18n="nav.contact">Contact</span><span class="ext">.tsx</span></a>
     </nav>
+    <div class="nav-controls">
+      <button id="langToggle" class="ctrl-btn" aria-label="Switch language / Changer de langue">FR</button>
+      <label class="theme-switch">
+        <input type="checkbox" id="themeCheckbox" aria-label="Toggle dark mode">
+        <span class="track"><span class="thumb"></span></span>
+      </label>
+    </div>
   </div>
 </header>
  
@@ -39,13 +46,16 @@
         <div><span class="ln">4</span>};</div>
       </div>
       <div class="render-out">
-        <p class="tagline" style="margin-top:0;margin-bottom:4px;color:var(--accent);font-family:var(--mono);font-size:13px;font-weight:600;">↳ render output</p>
-        <h1 class="name-render">GRACE<span class="cursor">&nbsp;</span></h1>
-        <p class="tagline">I build software, then explain it — tutorials, product walkthroughs, and honest reviews for developers who'd rather see the code run than read a spec sheet.</p>
+        <p class="render-label" data-i18n="hero.eyebrow">↳ render output</p>
+        <h1 class="name-render" id="nameRender">
+          <span class="name-fixed">GRACE</span><span id="nameExtra" class="name-extra" contenteditable="true" spellcheck="false" translate="no" tabindex="0"></span><span class="type-cursor" id="typeCursor"></span>
+        </h1>
+        <p class="type-hint" data-i18n="hero.typeHint">click the name and type — backspace stops right at "GRACE"</p>
+        <p class="tagline" data-i18n="hero.tagline">I build software, then explain it — tutorials, product walkthroughs, and honest reviews for developers who'd rather see the code run than read a spec sheet.</p>
         <div class="badges">
-          <span class="badge">◆ <b>Technical UGC</b></span>
-          <span class="badge warm">▲ Dev Tools &amp; SaaS</span>
-          <span class="badge">● Available for briefs</span>
+          <span class="badge">◆ <span data-i18n="hero.badge1">Technical UGC</span></span>
+          <span class="badge warm">▲ <span data-i18n="hero.badge2">Dev Tools &amp; SaaS</span></span>
+          <span class="badge">● <span data-i18n="hero.badge3">Available for briefs</span></span>
         </div>
       </div>
     </div>
@@ -53,13 +63,13 @@
  
   <!-- ABOUT -->
   <section id="about" data-reveal>
-    <div class="eyebrow">about</div>
-    <h2 class="title">Who's writing the code</h2>
+    <div class="eyebrow" data-i18n="about.eyebrow">about</div>
+    <h2 class="title" data-i18n="about.title">Who's writing the code</h2>
     <div class="about-grid">
       <div class="about-copy">
-        <p>Hi, I'm Grace — a <span class="hl">frontend developer turned technical content creator</span>. Most UGC creators explain a product's vibe. I explain how it actually works, because I've shipped with these tools myself.</p>
-        <p>My content covers <span class="hl">developer tools, SaaS products, and dev-facing platforms</span>: setup walkthroughs, honest first-impressions, "what I'd change" breakdowns, and side-by-side comparisons your audience can trust because they came from real usage, not a script.</p>
-        <p>Every video or post is built the way I build software: <span class="hl">test it, break it, explain it clearly</span> — so the content holds up to a technical audience, not just a scroll.</p>
+        <p data-i18n="about.p1">Hi, I'm Grace — a <span class="hl">frontend developer turned technical content creator</span>. Most UGC creators explain a product's vibe. I explain how it actually works, because I've shipped with these tools myself.</p>
+        <p data-i18n="about.p2">My content covers <span class="hl">developer tools, SaaS products, and dev-facing platforms</span>: setup walkthroughs, honest first-impressions, "what I'd change" breakdowns, and side-by-side comparisons your audience can trust because they came from real usage, not a script.</p>
+        <p data-i18n="about.p3">Every video or post is built the way I build software: <span class="hl">test it, break it, explain it clearly</span> — so the content holds up to a technical audience, not just a scroll.</p>
       </div>
       <div class="about-panel">
         <div class="term-top">
@@ -72,52 +82,126 @@
 <span class="k">format:</span> <span class="s">"demos, reviews, tutorials"</span>
 <span class="k">based_in:</span> <span class="s">"remote / async"</span></pre>
         <div class="stat-rail">
-          <div><div class="n">24K</div><div class="l">FOLLOWERS</div></div>
-          <div><div class="n">1.2M</div><div class="l">VIEWS</div></div>
-          <div><div class="n">40+</div><div class="l">BRAND DEMOS</div></div>
+          <div><div class="n">24K</div><div class="l" data-i18n="about.stat1">FOLLOWERS</div></div>
+          <div><div class="n">1.2M</div><div class="l" data-i18n="about.stat2">VIEWS</div></div>
+          <div><div class="n">40+</div><div class="l" data-i18n="about.stat3">BRAND DEMOS</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- WORK: SAMPLE VIDEOS -->
+  <section id="work" data-reveal>
+    <div class="eyebrow" data-i18n="work.eyebrow">work</div>
+    <h2 class="title" data-i18n="work.title">Sample clips from past briefs</h2>
+    <p class="section-intro" data-i18n="work.intro">A quick look at format and pacing — swap these for your real portfolio cuts.</p>
+    <div class="video-grid">
+      <div class="editor video-card">
+        <div class="chrome">
+          <div class="traffic"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+          <div class="filename">demo-01.mp4</div>
+        </div>
+        <video controls preload="metadata" muted playsinline
+          src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4">
+        </video>
+        <div class="video-meta">
+          <span class="badge">⎇ onboarding-demo</span>
+          <span class="badge warm">◷ 0:38</span>
+        </div>
+      </div>
+      <div class="editor video-card">
+        <div class="chrome">
+          <div class="traffic"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+          <div class="filename">demo-02.mp4</div>
+        </div>
+        <video controls preload="metadata" muted playsinline
+          src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4">
+        </video>
+        <div class="video-meta">
+          <span class="badge">⎇ hands-on-review</span>
+          <span class="badge warm">◷ 0:52</span>
+        </div>
+      </div>
+      <div class="editor video-card">
+        <div class="chrome">
+          <div class="traffic"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+          <div class="filename">demo-03.mp4</div>
+        </div>
+        <video controls preload="metadata" muted playsinline
+          src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4">
+        </video>
+        <div class="video-meta">
+          <span class="badge">⎇ tutorial-series</span>
+          <span class="badge warm">◷ 0:41</span>
+        </div>
+      </div>
+      <div class="editor video-card">
+        <div class="chrome">
+          <div class="traffic"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+          <div class="filename">demo-04.mp4</div>
+        </div>
+        <video controls preload="metadata" muted playsinline
+          src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4">
+        </video>
+        <div class="video-meta">
+          <span class="badge">⎇ quick-tip</span>
+          <span class="badge warm">◷ 0:29</span>
+        </div>
+      </div>
+      <div class="editor video-card">
+        <div class="chrome">
+          <div class="traffic"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+          <div class="filename">demo-05.mp4</div>
+        </div>
+        <video controls preload="metadata" muted playsinline
+          src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4">
+        </video>
+        <div class="video-meta">
+          <span class="badge">⎇ brand-partnership</span>
+          <span class="badge warm">◷ 0:47</span>
         </div>
       </div>
     </div>
   </section>
  
   <!-- WHAT IS TECHNICAL UGC -->
-  <section id="work" data-reveal>
+  <section id="explainer" data-reveal>
     <div class="eyebrow">git diff — what-is-technical-ugc.md</div>
-    <h2 class="title">What technical UGC actually is</h2>
+    <h2 class="title" data-i18n="explainer.title">What technical UGC actually is</h2>
     <div class="ugc-grid">
       <div class="diff">
-        <div class="diff-row rem"><span class="diff-mark">−</span><span class="diff-text">A generic creator reading your landing page copy on camera.</span></div>
-        <div class="diff-row rem"><span class="diff-mark">−</span><span class="diff-text">Vague praise: <b>"this tool is so easy to use!"</b></span></div>
-        <div class="diff-row add"><span class="diff-mark">+</span><span class="diff-text">A developer actually installing, configuring, and using your product on screen.</span></div>
-        <div class="diff-row add"><span class="diff-mark">+</span><span class="diff-text">Specific, credible detail: <b>setup time, edge cases, real errors, and fixes.</b></span></div>
-        <div class="diff-row add"><span class="diff-mark">+</span><span class="diff-text">Content technical audiences actually trust — because it holds up under questions.</span></div>
+        <div class="diff-row rem"><span class="diff-mark">−</span><span class="diff-text" data-i18n="diff.rem1">A generic creator reading your landing page copy on camera.</span></div>
+        <div class="diff-row rem"><span class="diff-mark">−</span><span class="diff-text" data-i18n="diff.rem2">Vague praise: <b>"this tool is so easy to use!"</b></span></div>
+        <div class="diff-row add"><span class="diff-mark">+</span><span class="diff-text" data-i18n="diff.add1">A developer actually installing, configuring, and using your product on screen.</span></div>
+        <div class="diff-row add"><span class="diff-mark">+</span><span class="diff-text" data-i18n="diff.add2">Specific, credible detail: <b>setup time, edge cases, real errors, and fixes.</b></span></div>
+        <div class="diff-row add"><span class="diff-mark">+</span><span class="diff-text" data-i18n="diff.add3">Content technical audiences actually trust — because it holds up under questions.</span></div>
       </div>
       <div class="ugc-copy">
-        <p>Technical UGC is developer-made content — demos, reviews, and tutorials — created by someone who understands the product at the code level, not just the marketing page.</p>
-        <p>For dev tools and SaaS brands, that distinction is the difference between a video that gets skipped and one that gets bookmarked, shared in Slack, and cited in a comment thread.</p>
+        <p data-i18n="ugc.p1">Technical UGC is developer-made content — demos, reviews, and tutorials — created by someone who understands the product at the code level, not just the marketing page.</p>
+        <p data-i18n="ugc.p2">For dev tools and SaaS brands, that distinction is the difference between a video that gets skipped and one that gets bookmarked, shared in Slack, and cited in a comment thread.</p>
       </div>
     </div>
   </section>
  
   <!-- SERVICES -->
   <section id="services" data-reveal>
-    <div class="eyebrow">services</div>
-    <h2 class="title">How I can help your product</h2>
+    <div class="eyebrow" data-i18n="services.eyebrow">services</div>
+    <h2 class="title" data-i18n="services.title">How I can help your product</h2>
     <div class="svc-grid">
       <div class="svc-card">
         <div class="svc-fn">function <span style="color:var(--ink)">productDemo</span><span class="paren">()</span></div>
-        <h3>Product walkthroughs</h3>
-        <p>Real setup-to-first-win demos that show your product doing what it claims, no staged screens.</p>
+        <h3 data-i18n="svc1.h3">Product walkthroughs</h3>
+        <p data-i18n="svc1.p">Real setup-to-first-win demos that show your product doing what it claims, no staged screens.</p>
       </div>
       <div class="svc-card">
         <div class="svc-fn">function <span style="color:var(--ink)">honestReview</span><span class="paren">()</span></div>
-        <h3>Hands-on reviews</h3>
-        <p>Credible, developer-voiced reviews that weigh trade-offs — the kind that convert a skeptical audience.</p>
+        <h3 data-i18n="svc2.h3">Hands-on reviews</h3>
+        <p data-i18n="svc2.p">Credible, developer-voiced reviews that weigh trade-offs — the kind that convert a skeptical audience.</p>
       </div>
       <div class="svc-card">
         <div class="svc-fn">function <span style="color:var(--ink)">tutorialSeries</span><span class="paren">()</span></div>
-        <h3>Tutorials &amp; explainers</h3>
-        <p>Short-form or long-form tutorials that turn your docs into content people actually finish.</p>
+        <h3 data-i18n="svc3.h3">Tutorials &amp; explainers</h3>
+        <p data-i18n="svc3.p">Short-form or long-form tutorials that turn your docs into content people actually finish.</p>
       </div>
     </div>
   </section>
@@ -127,10 +211,10 @@
     <div class="contact-panel">
       <div>
         <div class="prompt-line">$ open-a-brief --with=grace</div>
-        <h2>Let's ship something worth watching.</h2>
-        <p>Send over your product and audience, and I'll put together a content plan built for developers.</p>
+        <h2 data-i18n="contact.title">Let's ship something worth watching.</h2>
+        <p data-i18n="contact.p">Send over your product and audience, and I'll put together a content plan built for developers.</p>
       </div>
-      <button class="btn">Start a brief →</button>
+      <button class="btn" data-i18n="contact.btn">Start a brief →</button>
     </div>
   </section>
  
@@ -138,8 +222,8 @@
  
 <footer class="wrap">
   <div class="foot-row">
-    <span>© 2026 Grace — Technical UGC</span>
-    <span>Built with React · TypeScript · Vite</span>
+    <span data-i18n="footer.text">© 2026 Grace — Technical UGC</span>
+    <span data-i18n="footer.stack">Built with React · TypeScript · Vite</span>
   </div>
 </footer>
 
