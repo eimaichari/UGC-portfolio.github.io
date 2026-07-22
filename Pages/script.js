@@ -1,7 +1,7 @@
   // ---- Interactive hero name (auto-types sample words, pauses while the visitor edits) ----
   const nameExtra = document.getElementById('nameExtra');
   const nameRender = document.getElementById('nameRender');
-  const AUTO_WORDS = [' KUTI', ' Web Developer', ' UGC', ' Tech UGC'];
+  const AUTO_WORDS = [' KUTI', ' Web Dev', ' UGC', ' Tech UGC', ' React', ' Shopify', ' SaaS', ' Dev Tools', ' Frontend', ' Creator'];
   const MAX_CHARS = 17;
  
   const TYPE_SPEED = 95;
