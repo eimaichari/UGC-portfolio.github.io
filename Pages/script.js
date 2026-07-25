@@ -6,8 +6,13 @@
  
   const TYPE_SPEED = 95;
   const DELETE_SPEED = 50;
-  const HOLD_TIME = 1300;
   const GAP_TIME = 350;
+ 
+  function getHoldTime(charLength){
+    const BASE_HOLD = 900;
+    const PER_CHAR_HOLD = 75;
+    return BASE_HOLD + PER_CHAR_HOLD * charLength;
+  }
  
   // Flips back to true when the user clicks away (blur), so the demo resumes.
   let autoTypeEnabled = true;
@@ -29,7 +34,7 @@
  
       if(charCount === word.length){
         deleting = true;
-        autoTypeTimer = setTimeout(autoTypeStep, HOLD_TIME);
+        autoTypeTimer = setTimeout(autoTypeStep, getHoldTime(word.length));
       } else {
         autoTypeTimer = setTimeout(autoTypeStep, TYPE_SPEED);
       }
@@ -76,7 +81,7 @@
   });
  
   nameExtra.addEventListener('focus', stopAutoTypeOnUserInteraction);
-  nameExtra.addEventListener('blur', resumeAutoTypeOnBlur);
+  nameExtra.addEventListener('blur', resumeAutoTypeOnBlur); 
  
   nameExtra.addEventListener('input', () => {
     if (nameExtra.textContent.includes('\n')) {
@@ -187,9 +192,9 @@ Best regards,
                  fr:'Mon contenu couvre <span class="hl">les outils pour développeurs, les produits SaaS et les plateformes techniques</span> : prises en main, premières impressions honnêtes, analyses « ce que je changerais », et comparatifs auxquels votre audience peut faire confiance, car ils viennent d\'un usage réel, pas d\'un script.'},
     'about.p3': {en:'Every video or post is built the way I build software: <span class="hl">test it, break it, explain it clearly</span> — so the content holds up to a technical audience, not just a scroll.',
                  fr:'Chaque vidéo ou publication est construite comme je construis un logiciel : <span class="hl">le tester, le pousser à ses limites, l\'expliquer clairement</span> — pour que le contenu tienne face à une audience technique, pas seulement au scroll.'},
-    'about.stat1': {en:'FOLLOWERS', fr:'ABONNÉS'},
-    'about.stat2': {en:'VIEWS', fr:'VUES'},
-    'about.stat3': {en:'BRAND DEMOS', fr:'DÉMOS DE MARQUE'},
+    'about.stat1': {en:'TUTORIALS', fr:'TUTORIELS'},
+    'about.stat2': {en:'VIDEO CONTENT', fr:'CONTENU VIDÉO'},
+    'about.stat3': {en:'REMOTE', fr:'À DISTANCE'},
  
     'work.eyebrow': {en:'work', fr:'travaux'},
     'work.title': {en:'Sample clips from past briefs', fr:'Extraits de précédentes collaborations'},
