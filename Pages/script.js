@@ -187,7 +187,7 @@ Best regards,
     'about.eyebrow': {en:'about', fr:'à propos'},
     'about.title': {en:"Who's writing the code", fr:'Qui écrit le code'},
     'about.p1': {en:'Hi, I\'m Grace — a <span class="hl">frontend developer and technical content creator</span>. Instead of simply explaining a product\'s vibe. I explain how it actually works, because I\'ve shipped with these tools myself.',
-                 fr:'Bonjour, je suis Grace — <span class="hl">développeuse front-end est créateur de contenu technique</span>. Au lieu de simplement décrire l\'ambiance d\'un produit. Moi, j\'explique comment il fonctionne vraiment, car j\'ai développé avec ces outils moi-même.'},
+                 fr:'Bonjour, je suis Grace — <span class="hl">développeur front-end est créateur de contenu technique</span>. Au lieu de simplement décrire l\'ambiance d\'un produit. Je l\'explique comment il fonctionne vraiment, car j\'ai développé avec ces outils moi-même.'},
     'about.p2': {en:'My content covers <span class="hl">developer tools, SaaS products, and dev-facing platforms</span>: setup walkthroughs, honest first-impressions, "what I\'d change" breakdowns, and side-by-side comparisons your audience can trust because they came from real usage, not a script.',
                  fr:'Mon contenu couvre <span class="hl">les outils pour développeurs, les produits SaaS et les plateformes techniques</span> : prises en main, premières impressions honnêtes, analyses « ce que je changerais », et comparatifs auxquels votre audience peut faire confiance, car ils viennent d\'un usage réel, pas d\'un script.'},
     'about.p3': {en:'Every video or post is built the way I build software: <span class="hl">test it, break it, explain it clearly</span> — so the content holds up to a technical audience, not just a scroll.',
@@ -197,8 +197,8 @@ Best regards,
     'about.stat3': {en:'REMOTE', fr:'À DISTANCE'},
  
     'work.eyebrow': {en:'work', fr:'travaux'},
-    'work.title': {en:'Sample clips from past briefs', fr:'Extraits de précédentes collaborations'},
-    'work.intro': {en:'A quick look at format and pacing — swap these for your real portfolio cuts.', fr:"Un aperçu du format et du rythme — à remplacer par vos propres montages."},
+    'work.title': {en:'Clips', fr:'Extraits vidéo'},
+    'work.intro': {en:'A quick look at format and pacing.', fr:"Un aperçu du format et du rythme."},
  
     'explainer.title': {en:'What technical UGC actually is', fr:'Ce qu\'est vraiment le contenu technique'},
     'diff.rem1': {en:'A generic creator reading your landing page copy on camera.', fr:'Un créateur générique qui lit le texte de votre page d\'accueil face caméra.'},
@@ -225,7 +225,7 @@ Best regards,
     'contact.btn': {en:'Start a brief →', fr:'Démarrer un projet →'},
  
     'footer.text': {en:'© 2026 Grace — Technical UGC', fr:'© 2026 Grace — Contenu technique'},
-    'footer.stack': {en:'Built with React · TypeScript · Vite', fr:'Développé avec React · TypeScript · Vite'},
+    'footer.stack': {en:'Built with Love', fr:'Développé avec Amour'},
   };
  
   const langBtn = document.getElementById('langToggle');
