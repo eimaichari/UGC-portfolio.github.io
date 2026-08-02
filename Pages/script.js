@@ -197,8 +197,7 @@ Best regards,
     'about.stat3': {en:'REMOTE', fr:'À DISTANCE'},
  
     'work.eyebrow': {en:'work', fr:'travaux'},
-    'work.title': {en:'Sample clips from past briefs', fr:'Extraits de précédentes collaborations'},
-    'work.intro': {en:'A quick look at format and pacing — swap these for your real portfolio cuts.', fr:"Un aperçu du format et du rythme — à remplacer par vos propres montages."},
+    'work.title': {en:'Clips', fr:'Extraits'},
  
     'explainer.title': {en:'What technical UGC actually is', fr:'Ce qu\'est vraiment le contenu technique'},
     'diff.rem1': {en:'A generic creator reading your landing page copy on camera.', fr:'Un créateur générique qui lit le texte de votre page d\'accueil face caméra.'},
@@ -225,7 +224,7 @@ Best regards,
     'contact.btn': {en:'Start a brief →', fr:'Démarrer un projet →'},
  
     'footer.text': {en:'© 2026 Grace — Technical UGC', fr:'© 2026 Grace — Contenu technique'},
-    'footer.stack': {en:'Built with React · TypeScript · Vite', fr:'Développé avec React · TypeScript · Vite'},
+    'footer.stack': {en:'Built with love', fr:'Développé avec amour'},
   };
  
   const langBtn = document.getElementById('langToggle');
